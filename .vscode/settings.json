@@ -1,0 +1,12 @@
+{
+  "tailwindCSS.experimental.configFile": "app/assets/css/main.css",
+  "eslint.codeActionsOnSave.mode": "problems",
+  "eslint.format.enable": true,
+  "tailwindCSS.files.exclude": [
+  "**/.git/**",
+  "**/node_modules/**",
+  "**/.hg/**",
+  "**/.svn/**",
+  "**/.nuxt/**"
+]
+}
