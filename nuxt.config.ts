@@ -33,4 +33,9 @@ export default defineNuxtConfig({
       Kanit: [300, 400, 500, 600, 700, 800],
     },
   },
+  image: {
+    cloudinary: {
+      baseURL: 'https://res.cloudinary.com/dqx4sss9s/image/upload',
+    },
+  },
 })

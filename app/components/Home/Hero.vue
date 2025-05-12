@@ -3,7 +3,8 @@
     <div class="flex flex-col items-center mx-auto max-w-5xl">
       <div class="z-10 flex flex-col items-center gap-6 text-center">
         <NuxtImg
-          src="promptKai_logo-noBG.png"
+          provider="cloudinary"
+          src="promptKai_logo-noBG_v7yekk"
           alt="logo"
           class="h-32"
         />

@@ -4,8 +4,9 @@
       <UContainer class="justify-between justify-items-center grid grid-cols-2 lg:grid-cols-3">
         <section class="flex items-center place-content-start w-full">
           <NuxtImg
-            src="promptKai_logo-noBG.png"
-            alt="PromptKai Logo"
+            provider="cloudinary"
+            src="promptKai_logo-noBG_v7yekk"
+            alt="logo"
             width="40"
             height="40"
             class="mr-2"

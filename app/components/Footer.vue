@@ -3,9 +3,12 @@
     <UContainer>
       <div class="sm:mx-auto max-w-lg sm:text-center">
         <NuxtImg
-          src="promptKai_logo-noBG.png"
+          src="promptKai_logo-noBG_v7yekk"
+          provider="cloudinary"
           alt="logo"
-          class="mx-auto h-20"
+          width="50"
+          height="50"
+          class="mx-auto"
         />
         <p class="mt-2 font-bold">
           <span class="text-primary">พร้อมขาย</span>: POS สำหรับยุคใหม่ ทำงานบนมือถือ
