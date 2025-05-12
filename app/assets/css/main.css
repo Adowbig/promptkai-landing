@@ -2,7 +2,7 @@
 @import "@nuxt/ui";
 
 @theme static {
-  --font-sans: 'Nunito Sans', 'Kanit', sans-serif;
+  --font-sans: 'Kanit', sans-serif;
 
   --color-promptkai-50: #faf8fc;
   --color-promptkai-100: #f3eff8;

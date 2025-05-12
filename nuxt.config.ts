@@ -31,8 +31,7 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      'Kanit': [300, 400, 500, 600, 700, 800],
-      'Nunito Sans': [300, 400, 500, 600, 700, 800],
+      Kanit: [300, 400, 500, 600, 700, 800],
     },
   },
 })
