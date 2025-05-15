@@ -1,6 +1,6 @@
 <template>
   <div class="top-0 z-20 sticky">
-    <nav class="bg-white dark:bg-neutral-950 py-2 border-neutral-200 dark:border-neutral-700 border-b">
+    <nav class="bg-white dark:bg-neutral-950/90 dark:backdrop-blur-md py-2 border-neutral-200 dark:border-neutral-700 border-b">
       <UContainer class="justify-between justify-items-center grid grid-cols-2 lg:grid-cols-3">
         <section class="flex items-center place-content-start w-full">
           <NuxtImg
