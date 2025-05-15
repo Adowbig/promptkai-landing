@@ -12,7 +12,7 @@
           <h1 class="mb-6 font-bold text-2xl lg:text-5xl">
             <span class="text-primary">พร้อมขาย</span>: POS สำหรับยุคใหม่ ทำงานบนมือถือ
           </h1>
-          <p class="text-neutral-600 dark:text-neutral-400 lg:text-xl text-pretty">
+          <p class="text-dimmed dark:text-muted lg:text-xl text-pretty">
             เปลี่ยนร้านค้าของคุณให้เป็นสมาร์ทสโตร์ยุคใหม่ ด้วย <span class="font-bold text-primary">พร้อมขาย</span> แอพ POS บนมือถือที่จะปลดล็อคข้อจำกัดของเครื่อง POS แบบเดิมๆ จัดการทุกธุรกรรมได้อย่างง่ายดาย รวดเร็ว และแม่นยำ บนอุปกรณ์ที่คุณคุ้นเคย พร้อมฟีเจอร์ครบครันที่จะช่วยให้ธุรกิจของคุณเติบโตอย่างก้าวกระโดด ช่วยยกระดับประสิทธิภาพการดำเนินงานร้านค้าของคุณ
           </p>
         </div>
@@ -30,7 +30,7 @@
           />
         </div>
         <div class="flex flex-col items-center gap-4 mt-20">
-          <p class="text-neutral-600 dark:text-neutral-500 lg:text-left text-center:">
+          <p class="text-muted dark:text-toned lg:text-left text-center:">
             สร้างโดยเทคโนโลยี Open Source ชั้นนำ
           </p>
           <ul class="flex flex-wrap justify-center items-center gap-8">

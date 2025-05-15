@@ -1,6 +1,6 @@
 <template>
   <UButton
-    class="font-bold"
+    class="dark:font-semibold font-bold"
     :label="`ดาวน์โหลด ${appName ? 'พร้อมขาย' : ''}`"
     icon="solar:download-minimalistic-bold"
     target="_blank"

@@ -13,7 +13,7 @@
         <p class="mt-2 font-bold">
           <span class="text-primary">พร้อมขาย</span>: POS สำหรับยุคใหม่ ทำงานบนมือถือ
         </p>
-        <p class="mt-5 text-sm leading-relaxed">
+        <p class="mt-5 text-muted text-sm leading-relaxed">
           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
           galley of type and scrambled it to make a type specimen book.
         </p>
