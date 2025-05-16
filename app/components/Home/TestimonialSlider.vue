@@ -55,7 +55,7 @@
         @click="handlePrev"
       >
         <Icon
-          name="lucide:arrow-left"
+          name="solar:arrow-left-linear"
           class="size-5 text-black dark:text-neutral-400 group-hover/button:rotate-12 transition-transform duration-300"
         />
       </button>
@@ -71,7 +71,7 @@
         @click="handleNext"
       >
         <Icon
-          name="lucide:arrow-right"
+          name="solar:arrow-right-linear"
           class="size-5 text-black dark:text-neutral-400 group-hover/button:-rotate-12 transition-transform duration-300"
         />
       </button>
