@@ -16,6 +16,13 @@ useHead({
   titleTemplate(title) {
     return title ? `${title} - พร้อมขาย` : 'พร้อมขาย - POS ยุคใหม่ ทำงานบนมือถือ'
   },
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/vnd.microsoft.icon',
+      href: '/favicon.ico',
+    },
+  ],
 })
 
 useSeoMeta({
