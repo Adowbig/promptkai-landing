@@ -9,6 +9,7 @@ export default defineNuxtConfig({
   ],
   devtools: { enabled: true },
   app: {
+    baseURL: '/promptkai-landing/',
     head: {
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
