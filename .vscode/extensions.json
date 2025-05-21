@@ -3,6 +3,8 @@
     "dejmedus.tailwind-sorter",
     "dbaeumer.vscode-eslint",
     "bradlc.vscode-tailwindcss",
-    "vue.volar"
+    "vue.volar",
+    "nuxtr.nuxtr-vscode",
+    "rooveterinaryinc.roo-cline"
   ]
 }
