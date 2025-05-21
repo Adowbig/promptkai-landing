@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "nuxt": {
+      "url": "https://mcp.nuxt.com/sse",
+      "timeout": 30,
+      "alwaysAllow": []
+    }
+  }
+}
