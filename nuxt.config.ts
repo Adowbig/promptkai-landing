@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/google-fonts',
   ],
+  ssr: false,
   devtools: { enabled: true },
   app: {
     baseURL: '/promptkai-landing/',
