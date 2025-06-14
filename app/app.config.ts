@@ -3,13 +3,7 @@ export default defineAppConfig({
   ui: {
     colors: {
       primary: 'promptkai',
-      neutral: 'charade',
-    },
-    button: {
-      defaultVariants: {
-        // Set default button color to neutral
-        // color: 'neutral'
-      },
+      neutral: 'promptkai-dark',
     },
   },
 })

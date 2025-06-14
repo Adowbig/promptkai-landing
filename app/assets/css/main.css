@@ -4,30 +4,31 @@
 @theme static {
   --font-sans: 'Kanit', sans-serif;
 
-  --color-promptkai-50: #faf8fc;
-  --color-promptkai-100: #f3eff8;
-  --color-promptkai-200: #eae1f3;
-  --color-promptkai-300: #d9cae8;
-  --color-promptkai-400: #c0a7d9;
-  --color-promptkai-500: #9d76c1;
-  --color-promptkai-600: #9169b4;
-  --color-promptkai-700: #7b549c;
-  --color-promptkai-800: #674980;
-  --color-promptkai-900: #543b68;
-  --color-promptkai-950: #382249;
+  --color-promptkai-50: #f6f6fc;
+  --color-promptkai-100: #f0eff8;
+  --color-promptkai-200: #e2e1f3;
+  --color-promptkai-300: #cccae8;
+  --color-promptkai-400: #a19ad3;
+  --color-promptkai-500: #9388ca;
+  --color-promptkai-600: #7f6dba;
+  --color-promptkai-700: #6e5ba6;
+  --color-promptkai-800: #5c4c8b;
+  --color-promptkai-900: #4c3f73;
+  --color-promptkai-950: #30284d;
 
   /* Dark Mode Color Palette */
-  --color-charade-50: #f6f7f9;
-  --color-charade-100: #ecedf2;
-  --color-charade-200: #d5d7e2;
-  --color-charade-300: #b1b7c8;
-  --color-charade-400: #868faa;
-  --color-charade-500: #677190;
-  --color-charade-600: #525a77;
-  --color-charade-700: #434961;
-  --color-charade-800: #3a4052;
-  --color-charade-900: #343746;
-  --color-charade-950: #22242e;
+  --color-promptkai-dark: oklch(31.982% 0.0284 250.75);
+  --color-promptkai-dark-50: oklch(96.544% 0.00418 236.5);
+  --color-promptkai-dark-100: oklch(92.514% 0.0104 247.94);
+  --color-promptkai-dark-200: oklch(84.352% 0.02062 250.41);
+  --color-promptkai-dark-300: oklch(76.228% 0.03089 248.23);
+  --color-promptkai-dark-400: oklch(67.677% 0.04414 249.59);
+  --color-promptkai-dark-500: oklch(58.964% 0.05638 250.54);
+  --color-promptkai-dark-600: oklch(50.476% 0.0473 249.86);
+  --color-promptkai-dark-700: oklch(41.613% 0.03777 248.75);
+  --color-promptkai-dark-800: oklch(31.982% 0.0284 250.75);
+  --color-promptkai-dark-900: oklch(19.73% 0.0127 248.47);
+  --color-promptkai-dark-950: oklch(12.595% 0.00537 226.05);
 
 }
 @theme {
