@@ -13,11 +13,11 @@ jobs:
       - run: corepack enable
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
       # Pick your own package manager and build script
-      - run: yarn install
+      - run: pnpm install
       - name: Build with base URL
-        run: NUXT_APP_BASE_URL=/${{ github.event.repository.name }}/ yarn dlx nuxt build --preset github_pages
+        run: NUXT_APP_BASE_URL=/${{ github.event.repository.name }}/ pnpm dlx nuxt build --preset github_pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
