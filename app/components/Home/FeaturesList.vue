@@ -1,16 +1,20 @@
 <template>
-  <div>
-    <h1 class="drop-shadow dark:drop-shadow-none mb-10 font-bold text-4xl text-center decoration-2 decoration-primary underline underline-offset-4">
+  <UContainer class="pt-32">
+    <h1 class="mb-2 font-bold text-highlighted text-5xl">
       คุณสมบัติของระบบ <span class="text-primary">พร้อมขาย</span>
     </h1>
-    <section class="gap-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+    <p class="mb-8 text-muted dark:text-toned text-lg">
+      ระบบ <span class="text-primary">พร้อมขาย</span> มีคุณสมบัติที่หลากหลาย
+      ช่วยให้การจัดการร้านค้าของคุณเป็นเรื่องง่ายและสะดวกสบาย
+    </p>
+    <section class="flex flex-row flex-wrap gap-4">
       <template
         v-for="feature in features"
         :key="feature.title"
       >
         <UCard
           variant="soft"
-          :ui="{ root: ' shadow place-content-center' }"
+          :ui="{ root: 'shadow place-content-center flex-1/2 md:flex-1/3 lg:flex-1/4' }"
         >
           <div class="flex items-center">
             <UIcon
@@ -18,7 +22,7 @@
               size="32"
               class="mr-4 text-primary"
             />
-            <div>
+            <div class="flex-1">
               <h2 class="font-bold text-xl">
                 {{ feature.title }}
               </h2>
@@ -30,7 +34,7 @@
         </UCard>
       </template>
     </section>
-  </div>
+  </UContainer>
 </template>
 
 <script setup lang="ts">
