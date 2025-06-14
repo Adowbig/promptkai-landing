@@ -16,8 +16,8 @@ jobs:
           node-version: "22"
       # Pick your own package manager and build script
       - run: pnpm install
-      - name: Build with base URL
-        run: NUXT_APP_BASE_URL=/${{ github.event.repository.name }}/ pnpm dlx nuxt build --preset github_pages
+      - name: Build
+        run: pnpm dlx nuxt build --preset github_pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
