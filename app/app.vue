@@ -3,7 +3,9 @@
     :tooltip="{ delayDuration: 0 }"
   >
     <Navbar />
-    <NuxtPage />
+    <main class="min-h-[calc(100dvh-var(--ui-header-height))]">
+      <NuxtPage />
+    </main>
     <Footer />
   </UApp>
 </template>
