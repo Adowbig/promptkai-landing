@@ -3,23 +3,19 @@
     <ClientOnly>
       <UTooltip
         text="เปลี่ยนโหมดสี"
-        :popper="{ strategy: 'absolute' }"
+        disable-closing-trigger
       >
         <UButton
-          square
-          :padded="false"
-          size="lg"
           color="neutral"
-          variant="soft"
-          :icon="iconName"
-          class="group"
-          @click="switchColorMode"
+          variant="ghost"
+          :icon="isDark ? 'lucide:moon' : 'lucide:sun'"
+          @click="startViewTransition"
         />
       </UTooltip>
 
       <template #fallback>
         <USkeleton
-          class="size-9"
+          class="size-6"
           :ui="{ rounded: 'rounded-full' }"
         />
       </template>
@@ -30,22 +26,61 @@
 <script lang="ts" setup>
 const colorMode = useColorMode()
 
-const ColorModeList = ['light', 'dark', 'system']
-type ColorMode = (typeof ColorModeList)[number]
+const isDark = computed({
+  get() {
+    return colorMode.value === 'dark'
+  },
+  set(_isDark) {
+    colorMode.preference = _isDark ? 'dark' : 'light'
+  },
+})
+const startViewTransition = (event: MouseEvent) => {
+  if (!document.startViewTransition || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    isDark.value = !isDark.value
+    return
+  }
 
-const switchColorMode = () => {
-  const currentIndex = ColorModeList.indexOf(colorMode.preference as ColorMode)
-  const nextIndex = (currentIndex + 1) % ColorModeList.length
-  colorMode.preference = ColorModeList[nextIndex] as ColorMode
+  const x = event.clientX
+  const y = event.clientY
+  const endRadius = Math.hypot(
+    Math.max(x, window.innerWidth - x),
+    Math.max(y, window.innerHeight - y),
+  )
+
+  const transition = document.startViewTransition(() => {
+    isDark.value = !isDark.value
+  })
+
+  transition.ready.then(() => {
+    const duration = 600
+    document.documentElement.animate(
+      {
+        clipPath: [
+          `circle(0px at ${x}px ${y}px)`,
+          `circle(${endRadius}px at ${x}px ${y}px)`,
+        ],
+      },
+      {
+        duration: duration,
+        easing: 'cubic-bezier(.76,.32,.29,.99)',
+        pseudoElement: '::view-transition-new(root)',
+      },
+    )
+  })
+}
+</script>
+
+<style>
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }
 
-const iconName = computed(() => {
-  const iconNameMap: Record<ColorMode, string> = {
-    system: 'solar:monitor-linear',
-    light: 'solar:sun-line-duotone',
-    dark: 'solar:moon-line-duotone',
-  }
-  const iconName = colorMode.preference as ColorMode
-  return `${iconNameMap[iconName]}`
-})
-</script>
+::view-transition-new(root) {
+  z-index: 99;
+}
+::view-transition-old(root) {
+  z-index: 1;
+}
+</style>
