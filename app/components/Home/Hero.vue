@@ -1,6 +1,7 @@
 <template>
-  <section class="relative py-32 overflow-hidden">
-    <div class="flex flex-col items-center mx-auto max-w-5xl">
+  <section class="relative py-10 md:py-24">
+    <AnimatedBackground />
+    <div class="flex flex-col items-center mx-auto max-w-(--ui-container)">
       <div class="z-10 flex flex-col items-center gap-6 text-center">
         <NuxtImg
           provider="cloudinary"
@@ -9,10 +10,10 @@
           class="h-32"
         />
         <div>
-          <h1 class="mb-6 font-bold text-2xl lg:text-5xl">
+          <h1 class="mb-6 font-bold text-highlighted text-3xl lg:text-5xl">
             <span class="text-primary">พร้อมขาย</span>: POS สำหรับยุคใหม่ ทำงานบนมือถือ
           </h1>
-          <p class="text-dimmed dark:text-muted lg:text-xl text-pretty">
+          <p class="text-dimmed dark:text-muted lg:text-xl text-balance">
             เปลี่ยนร้านค้าของคุณให้เป็นสมาร์ทสโตร์ยุคใหม่ ด้วย <span class="font-bold text-primary">พร้อมขาย</span> แอพ POS บนมือถือที่จะปลดล็อคข้อจำกัดของเครื่อง POS แบบเดิมๆ จัดการทุกธุรกรรมได้อย่างง่ายดาย รวดเร็ว และแม่นยำ บนอุปกรณ์ที่คุณคุ้นเคย พร้อมฟีเจอร์ครบครันที่จะช่วยให้ธุรกิจของคุณเติบโตอย่างก้าวกระโดด ช่วยยกระดับประสิทธิภาพการดำเนินงานร้านค้าของคุณ
           </p>
         </div>
@@ -29,7 +30,7 @@
             size="xl"
           />
         </div>
-        <div class="flex flex-col items-center gap-4 mt-20">
+        <div class="flex flex-col items-center gap-4 mt-12">
           <p class="text-muted dark:text-toned lg:text-left text-center:">
             สร้างโดยเทคโนโลยี Open Source ชั้นนำ
           </p>
@@ -38,9 +39,12 @@
               v-for="framework in frameworks"
               :key="framework.name"
             >
-              <UTooltip :text="framework.name">
+              <UTooltip
+                :text="framework.name"
+                :ui="{ text: 'text-sm', content: 'dark:bg-neutral-950' }"
+              >
                 <li
-                  class="hover:text-primary transition-colors duration-200"
+                  class="text-highlighted hover:text-primary transition-colors duration-200"
                 >
                   <UIcon
                     :name="framework.icon"
