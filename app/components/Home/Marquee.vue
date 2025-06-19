@@ -15,7 +15,7 @@
         cn(
           'flex shrink-0 justify-around [gap:var(--gap)]',
           vertical ? 'animate-marquee-vertical flex-col' : 'animate-marquee flex-row',
-          pauseOnHover ? 'group-hover:[animation-play-state:paused]' : '',
+          pauseOnHover ? 'pause-on-hover' : '',
         )
       "
       :style="{
@@ -54,6 +54,10 @@ withDefaults(
 
 .animate-marquee-vertical {
   animation: marquee-vertical var(--duration) linear infinite;
+}
+
+.group:hover .pause-on-hover {
+  animation-play-state: paused;
 }
 
 @keyframes marquee {
