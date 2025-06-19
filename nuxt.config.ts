@@ -6,6 +6,8 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/image',
     '@nuxt/fonts',
+    '@vueuse/nuxt',
+    'motion-v/nuxt',
   ],
   ssr: false,
   devtools: { enabled: true },
