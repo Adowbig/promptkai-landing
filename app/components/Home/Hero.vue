@@ -10,10 +10,13 @@
           class="h-32"
         />
         <div>
-          <h1 class="mb-6 font-bold text-highlighted text-3xl lg:text-5xl text-balance">
-            <span class="text-primary">พร้อมขาย</span>: POS สำหรับยุคใหม่ ทำงานบนมือถือ
+          <h1 class="mb-4 font-bold text-primary text-5xl lg:text-7xl before:content-['“'] after:content-['”']">
+            พร้อมขาย
           </h1>
-          <p class="text-dimmed dark:text-muted lg:text-xl text-balance">
+          <h1 class="mb-6 font-bold text-highlighted text-3xl lg:text-5xl text-balance">
+            POS ยุคใหม่ ทำงานบนมือถือ
+          </h1>
+          <p class="text-toned lg:text-lg text-balance">
             เปลี่ยนร้านค้าของคุณให้เป็นสมาร์ทสโตร์ยุคใหม่ ด้วย <span class="font-bold text-primary">พร้อมขาย</span> แอพ POS บนมือถือที่จะปลดล็อคข้อจำกัดของเครื่อง POS แบบเดิมๆ จัดการทุกธุรกรรมได้อย่างง่ายดาย รวดเร็ว และแม่นยำ บนอุปกรณ์ที่คุณคุ้นเคย พร้อมฟีเจอร์ครบครันที่จะช่วยให้ธุรกิจของคุณเติบโตอย่างก้าวกระโดด ช่วยยกระดับประสิทธิภาพการดำเนินงานร้านค้าของคุณ
           </p>
         </div>
