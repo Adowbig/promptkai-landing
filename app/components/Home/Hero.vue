@@ -1,8 +1,8 @@
 <template>
   <section class="relative py-10 md:py-24">
-    <AnimatedBackground />
-    <div class="flex flex-col items-center mx-auto max-w-(--ui-container)">
-      <div class="z-10 flex flex-col items-center gap-6 text-center">
+    <LazyAnimatedBackground />
+    <UContainer class="flex flex-col items-center">
+      <div class="flex flex-col items-center gap-6 text-center">
         <NuxtImg
           provider="cloudinary"
           src="promptKai_logo-noBG_v7yekk"
@@ -10,7 +10,7 @@
           class="h-32"
         />
         <div>
-          <h1 class="mb-6 font-bold text-highlighted text-3xl lg:text-5xl">
+          <h1 class="mb-6 font-bold text-highlighted text-3xl lg:text-5xl text-balance">
             <span class="text-primary">พร้อมขาย</span>: POS สำหรับยุคใหม่ ทำงานบนมือถือ
           </h1>
           <p class="text-dimmed dark:text-muted lg:text-xl text-balance">
@@ -34,7 +34,7 @@
           <p class="text-muted dark:text-toned lg:text-left text-center:">
             สร้างโดยเทคโนโลยี Open Source ชั้นนำ
           </p>
-          <ul class="flex flex-wrap justify-center items-center gap-8">
+          <ul class="flex flex-wrap justify-center items-center gap-4">
             <template
               v-for="framework in frameworks"
               :key="framework.name"
@@ -48,7 +48,7 @@
                 >
                   <UIcon
                     :name="framework.icon"
-                    size="32"
+                    size="24"
                   />
                 </li>
               </UTooltip>
@@ -56,7 +56,7 @@
           </ul>
         </div>
       </div>
-    </div>
+    </UContainer>
   </section>
 </template>
 
