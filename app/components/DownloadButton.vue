@@ -1,13 +1,20 @@
 <template>
-  <UButton
-    class="dark:font-semibold font-bold"
-    :class="$props.class"
-    :label="`ดาวน์โหลด ${appName ? 'พร้อมขาย' : ''}`"
-    :icon="$props.icon"
-    target="_blank"
-    :size="size"
-    @click="triggerConfetti($event)"
-  />
+  <!-- Need to be improved -->
+  <Motion
+    :while-hover="{ scale: 1.05, rotate: [0, -2, 2, -2, 2, 0], transition: { rotate: { duration: 0.5 } } }"
+    :while-press="{ scale: 0.9 }"
+    class="inline-block"
+  >
+    <UButton
+      class="dark:font-semibold font-bold"
+      :class="$props.class"
+      :label="`ดาวน์โหลด ${appName ? 'พร้อมขาย' : ''}`"
+      :icon="$props.icon"
+      target="_blank"
+      :size="size"
+      @click="triggerConfetti($event)"
+    />
+  </Motion>
 </template>
 
 <script setup lang="ts">
