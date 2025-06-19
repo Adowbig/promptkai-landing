@@ -1,15 +1,16 @@
 <template>
   <UButton
     class="dark:font-semibold font-bold"
+    :class="$props.class"
     :label="`ดาวน์โหลด ${appName ? 'พร้อมขาย' : ''}`"
-    icon="solar:download-minimalistic-bold"
+    :icon="$props.icon"
     target="_blank"
     :size="size"
   />
 </template>
 
 <script setup lang="ts">
-import { button } from '#build/ui'
+import type { button } from '#build/ui'
 
 defineProps({
   appName: {
@@ -17,13 +18,16 @@ defineProps({
     default: false,
   },
   size: {
-    type: String as () => 'xs' | 'sm' | 'md' | 'lg' | 'xl',
-    default: button.defaultVariants.size,
-    validator: (value: string) => ['xs', 'sm', 'md', 'lg', 'xl'].includes(value),
+    type: String as () => typeof button.defaultVariants.size,
+    default: 'md',
   },
   icon: {
     type: String,
-    default: 'solar:download-minimalistic-linear',
+    default: 'solar:download-linear',
+  },
+  class: {
+    type: String,
+    default: '',
   },
 })
 </script>
