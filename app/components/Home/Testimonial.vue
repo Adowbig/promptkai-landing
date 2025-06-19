@@ -1,42 +1,63 @@
 <template>
-  <section class="py-32">
+  <section class="pt-24">
     <UContainer>
-      <h1 class="font-bold text-highlighted text-5xl text-right">
+      <h1 class="font-bold text-highlighted text-3xl md:text-5xl text-right">
+        <UIcon
+          name="solar:chat-round-like-bold"
+          class="inline-block size-8 md:size-12 text-primary align-bottom"
+        />
         ความคิดเห็นจาก<span class="text-primary">ผู้ใช้จริง</span>
       </h1>
-      <p class="mt-2 text-muted dark:text-toned text-lg text-right">
+      <p class="mt-2 text-muted dark:text-toned md:text-lg text-right text-balance">
         ผู้ใช้จริงของ <span class="text-primary">พร้อมขาย</span> ได้แชร์ประสบการณ์การใช้งาน
         และความพึงพอใจในการใช้งานระบบของเรา
       </p>
       <section class="flex flex-wrap gap-4 space-y-4 mt-8">
-        <template
-          v-for="testimonial in testimonials"
-          :key="testimonial.name"
+        <div
+          class="relative flex flex-col justify-center items-center w-full overflow-hidden"
         >
-          <UCard
-            variant="soft"
-            :ui="{ root: 'flex-1/2 sm:flex-1/3 lg:flex-1/6 m-0', body: 'p-3 sm:p-3' }"
+          <div
+            class="left-0 z-2 absolute inset-y-0 bg-gradient-to-r from-default w-1/3 pointer-events-none"
+          />
+          <div
+            class="right-0 z-2 absolute inset-y-0 bg-gradient-to-l from-default w-1/3 pointer-events-none"
+          />
+
+          <HomeMarquee
+            pause-on-hover
+            class="[--duration:30s]"
           >
-            <div class="flex flex-row justify-start items-center space-x-3 mb-4">
-              <UAvatar
-                :src="testimonial.img"
-                alt="User Avatar"
-                size="lg"
-              />
-              <div>
-                <h2 class="font-bold md:text-lg">
-                  {{ testimonial.name }}
-                </h2>
-                <p class="text-muted text-sm">
-                  {{ testimonial.role }}
+            <template
+              v-for="testimonial in testimonials"
+              :key="testimonial.name"
+            >
+              <UCard
+                variant="soft"
+                :ui="{ root: 'w-[300px]', body: 'p-3 sm:p-3' }"
+              >
+                <div class="flex flex-row justify-start items-center space-x-3 mb-4">
+                  <UAvatar
+                    :src="testimonial.img"
+                    alt="User Avatar"
+                    size="lg"
+                    :ui="{ root: 'rounded-lg' }"
+                  />
+                  <div>
+                    <h2 class="font-bold">
+                      {{ testimonial.name }}
+                    </h2>
+                    <p class="text-muted text-sm">
+                      {{ testimonial.role }}
+                    </p>
+                  </div>
+                </div>
+                <p class="text-default text-sm md:text-base">
+                  {{ testimonial.quote }}
                 </p>
-              </div>
-            </div>
-            <p class="text-default text-sm md:text-base text-balance">
-              {{ testimonial.quote }}
-            </p>
-          </UCard>
-        </template>
+              </UCard>
+            </template>
+          </HomeMarquee>
+        </div>
       </section>
     </UContainer>
   </section>
