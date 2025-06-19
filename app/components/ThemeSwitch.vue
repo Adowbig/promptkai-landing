@@ -33,8 +33,14 @@ const isDark = computed({
     colorMode.preference = _isDark ? 'dark' : 'light'
   },
 })
+
+const isAppearanceTransition = typeof document !== 'undefined'
+  // @ts-expect-error startViewTransition is not defined in Vue's types
+  && document.startViewTransition
+  && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
 const startViewTransition = (event: MouseEvent) => {
-  if (!document.startViewTransition || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if (!isAppearanceTransition || !event) {
     isDark.value = !isDark.value
     return
   }
@@ -42,27 +48,31 @@ const startViewTransition = (event: MouseEvent) => {
   const x = event.clientX
   const y = event.clientY
   const endRadius = Math.hypot(
-    Math.max(x, window.innerWidth - x),
-    Math.max(y, window.innerHeight - y),
+    Math.max(x, innerWidth - x),
+    Math.max(y, innerHeight - y),
   )
-
-  const transition = document.startViewTransition(() => {
+  const transition = document.startViewTransition(async () => {
     isDark.value = !isDark.value
+    await nextTick()
   })
 
   transition.ready.then(() => {
-    const duration = 600
+    const clipPath = [
+      `circle(0px at ${x}px ${y}px)`,
+      `circle(${endRadius}px at ${x}px ${y}px)`,
+    ]
     document.documentElement.animate(
       {
-        clipPath: [
-          `circle(0px at ${x}px ${y}px)`,
-          `circle(${endRadius}px at ${x}px ${y}px)`,
-        ],
+        clipPath: isDark.value
+          ? [...clipPath].reverse()
+          : clipPath,
       },
       {
-        duration: duration,
+        duration: 600,
         easing: 'cubic-bezier(.76,.32,.29,.99)',
-        pseudoElement: '::view-transition-new(root)',
+        pseudoElement: isDark.value
+          ? '::view-transition-old(root)'
+          : '::view-transition-new(root)',
       },
     )
   })
@@ -75,11 +85,16 @@ const startViewTransition = (event: MouseEvent) => {
   animation: none;
   mix-blend-mode: normal;
 }
-
-::view-transition-new(root) {
-  z-index: 99;
-}
 ::view-transition-old(root) {
+  z-index: 1;
+}
+::view-transition-new(root) {
+  z-index: 20;
+}
+.dark::view-transition-old(root) {
+  z-index: 20;
+}
+.dark::view-transition-new(root) {
   z-index: 1;
 }
 </style>
