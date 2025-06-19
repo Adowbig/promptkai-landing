@@ -2,7 +2,7 @@
   <UContainer class="py-24">
     <h1 class="font-bold text-highlighted text-3xl md:text-5xl">
       <UIcon
-        name="solar:chat-round-like-bold"
+        name="solar:question-circle-bold"
         class="inline-block size-8 md:size-12 text-primary align-bottom"
       />
       คำถามที่พบบ่อย
@@ -11,6 +11,7 @@
       หากคุณมีคำถามเกี่ยวกับการใช้งาน <span class="text-primary">พร้อมขาย</span> หรือ
       ต้องการข้อมูลเพิ่มเติม คุณสามารถดูคำถามที่พบบ่อยได้ที่นี่
     </p>
+    <!-- Simple Accordion for Demonstration; Will be replaced with Nuxt Content -->
     <UAccordion
       :items="items"
       :ui="{
