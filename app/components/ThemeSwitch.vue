@@ -7,7 +7,7 @@
       >
         <UButton
           color="neutral"
-          variant="ghost"
+          variant="outline"
           :icon="isDark ? 'lucide:moon' : 'lucide:sun'"
           @click="startViewTransition"
         />
@@ -15,8 +15,7 @@
 
       <template #fallback>
         <USkeleton
-          class="size-6"
-          :ui="{ rounded: 'rounded-full' }"
+          class="size-8"
         />
       </template>
     </ClientOnly>
