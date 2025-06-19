@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/eslint',
     '@nuxt/image',
-    '@nuxtjs/google-fonts',
+    '@nuxt/fonts',
   ],
   ssr: false,
   devtools: { enabled: true },
@@ -45,9 +45,17 @@ export default defineNuxtConfig({
       stylistic: true,
     },
   },
-  googleFonts: {
-    families: {
-      Kanit: [300, 400, 500, 600, 700, 800],
+
+  fonts: {
+    families: [
+      { name: 'Kanit', provider: 'google', display: 'swap', global: true },
+    ],
+    provider: 'google',
+    defaults: {
+      weights: [200, 300, 400, 500, 700, 800, 900],
+      preload: true,
+      styles: ['normal'],
+      subsets: ['latin', 'latin-ext', 'thai'],
     },
   },
   icon: {
