@@ -1,60 +1,48 @@
 <template>
-  <USlideover
+  <UDrawer
     :close="{ onClick: () => emit('close', false) }"
+    :ui="{
+      header: 'flex items-center',
+      footer: 'flex flex-row items-center space-x-1',
+    }"
     title="เมนู"
+    inset
+    direction="top"
   >
+    <template #header>
+      <NuxtImg
+        provider="cloudinary"
+        src="promptKai_logo-noBG_v7yekk"
+        alt="logo"
+        class="mr-2"
+        width="30"
+        height="30"
+      />
+      <span class="font-bold text-lg">พร้อมขาย</span>
+    </template>
     <template #body>
       <UNavigationMenu
         :items="items"
         class="w-full"
         color="primary"
+        :ui="{
+          link: 'py-4',
+        }"
         orientation="vertical"
       />
     </template>
-  </USlideover>
+    <template #footer>
+      <DownloadButton />
+      <LazyThemeSwitch />
+    </template>
+  </UDrawer>
 </template>
 
 <script setup lang="ts">
 import type { NavigationMenuItem } from '@nuxt/ui'
 
 const emit = defineEmits<{ close: [boolean] }>()
-
-const items = ref<NavigationMenuItem[]>([
-  {
-    label: 'คู่มือการใช้งาน',
-    children: [
-      {
-        label: 'แอพพลิเคชั่น',
-        description: 'คู่มือการใช้งานแอพพลิเคชั่น',
-        icon: 'solar:smartphone-line-duotone',
-      },
-      {
-        label: 'เว็บไซต์',
-        description: 'คู่มือการใช้งานเว็บไซต์ระบบหลังบ้าน',
-        icon: 'solar:laptop-minimalistic-line-duotone',
-      },
-    ],
-  },
-  {
-    label: 'บทความ',
-  },
-  {
-    label: 'เกี่ยวกับ',
-    children: [
-      {
-        label: 'เกี่ยวกับบริการ',
-        description: 'ข้อมูลเกี่ยวกับผลิตภัณฑ์',
-        icon: 'solar:info-circle-outline',
-      },
-      {
-        label: 'เกี่ยวกับเรา',
-        description: 'ข้อมูลเกี่ยวกับเรา',
-        icon: 'solar:users-group-rounded-linear',
-      },
-    ],
-  },
-  {
-    label: 'ติดต่อเรา',
-  },
-])
+defineProps<{
+  items: NavigationMenuItem[]
+}>()
 </script>
