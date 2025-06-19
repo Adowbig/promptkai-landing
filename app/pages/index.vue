@@ -3,6 +3,7 @@
     <HomeHero />
     <HomeFeaturesList />
     <HomeTestimonial />
+    <HomeFAQ />
     <HomeCTA />
   </div>
 </template>
