@@ -1,4 +1,8 @@
 <template>
+  <VueLenis
+    root
+    :options="lenisOptions"
+  />
   <UApp
     :tooltip="{ delayDuration: 0 }"
   >
@@ -13,6 +17,18 @@
 </template>
 
 <script setup lang="ts">
+import { VueLenis } from 'lenis/vue'
+import type { LenisOptions } from 'lenis'
+
+const lenisOptions: LenisOptions = {
+  duration: 1.5,
+  easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  touchMultiplier: 2,
+  syncTouch: true,
+  smoothWheel: true,
+  wheelMultiplier: 1.5,
+}
+
 useHead({
   htmlAttrs: {
     lang: 'th',

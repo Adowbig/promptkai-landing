@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@vueuse/nuxt',
     'motion-v/nuxt',
+    'lenis/nuxt',
   ],
   ssr: false,
   devtools: { enabled: true },
