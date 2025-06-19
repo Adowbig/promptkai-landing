@@ -46,15 +46,10 @@ import { LazyMobileNavbar } from '#components'
 
 const overlay = useOverlay()
 
-const navbarSlideover = overlay.create(LazyMobileNavbar)
-
-async function openNavbar() {
-  await navbarSlideover.open()
-}
-
-const items = ref<NavigationMenuItem[]>([
+const items: NavigationMenuItem[] = [
   {
     label: 'คู่มือการใช้งาน',
+    icon: 'solar:book-2-outline',
     children: [
       {
         label: 'แอพพลิเคชั่น',
@@ -70,24 +65,19 @@ const items = ref<NavigationMenuItem[]>([
   },
   {
     label: 'บทความ',
-  },
-  {
-    label: 'เกี่ยวกับ',
-    children: [
-      {
-        label: 'เกี่ยวกับบริการ',
-        description: 'ข้อมูลเกี่ยวกับผลิตภัณฑ์',
-        icon: 'solar:info-circle-outline',
-      },
-      {
-        label: 'เกี่ยวกับเรา',
-        description: 'ข้อมูลเกี่ยวกับเรา',
-        icon: 'solar:users-group-rounded-linear',
-      },
-    ],
+    icon: 'solar:pen-new-square-outline',
   },
   {
     label: 'ติดต่อเรา',
+    icon: 'solar:chat-line-outline',
   },
-])
+]
+
+const navbarSlideover = overlay.create(LazyMobileNavbar, { props: { items: items } })
+
+const openNavbar = () => {
+  navbarSlideover.open()
+
+  return
+}
 </script>
