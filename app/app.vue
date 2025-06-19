@@ -3,7 +3,9 @@
     :tooltip="{ delayDuration: 0 }"
   >
     <Navbar />
-    <main class="min-h-[calc(100dvh-var(--ui-header-height))]">
+    <main
+      class="min-h-[calc(100dvh-var(--ui-header-height))] overflow-hidden"
+    >
       <NuxtPage />
     </main>
     <Footer />
@@ -41,3 +43,23 @@ useSeoMeta({
   ogImage: '/promptKai_logo-noBG.png',
 })
 </script>
+
+<style>
+@media (min-width: 400px) and (prefers-reduced-motion: no-preference) {
+  .page-enter-active {
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.25, 1);
+  }
+  .page-leave-active {
+    transition: all 0.3s cubic-bezier(0.75, 0, 0.75, 0);
+  }
+
+  .page-leave-to {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  .page-enter-from {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+}
+</style>
