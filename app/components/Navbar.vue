@@ -1,9 +1,14 @@
 <template>
-  <nav class="top-0 z-20 sticky bg-default/80 backdrop-blur-md border-neutral-200 dark:border-neutral-700 border-b h-(--ui-header-height)">
+  <nav
+    class="top-0 z-10 sticky flex items-center bg-default/80 drop-shadow-sm backdrop-blur-xl border-default border-b h-(--ui-header-height)"
+  >
     <UContainer>
       <section class="flex items-center">
-        <section class="flex-1">
-          <div class="flex items-center">
+        <section class="flex md:flex-1 items-center shrink">
+          <NuxtLink
+            to="/"
+            class="flex items-center"
+          >
             <NuxtImg
               provider="cloudinary"
               src="promptKai_logo-noBG_v7yekk"
@@ -12,28 +17,31 @@
               width="30"
               height="30"
             />
-            <span class="font-bold text-lg">พร้อมขาย</span>
-          </div>
+            <span class="font-bold text-highlighted text-xl">พร้อมขาย</span>
+          </NuxtLink>
         </section>
-        <section class="hidden lg:flex items-center place-content-center">
+        <section class="hidden md:flex place-content-center lg:grow">
           <UNavigationMenu
+            as="nav"
             :items="items"
-            class="w-full"
+            :ui="{
+              root: 'w-full justify-center',
+            }"
             color="primary"
+            variant="link"
+            highlight
           />
         </section>
-        <section class="flex-1">
-          <div class="flex justify-end items-center space-x-3">
-            <DownloadButton />
-            <LazyThemeSwitch />
-            <UButton
-              icon="solar:hamburger-menu-linear"
-              variant="soft"
-              color="neutral"
-              class="lg:hidden"
-              @click="openNavbar"
-            />
-          </div>
+        <section class="flex md:flex-1 justify-end items-center space-x-1 grow">
+          <DownloadButton class="hidden md:flex" />
+          <LazyThemeSwitch class="hidden md:flex" />
+          <UButton
+            icon="solar:hamburger-menu-linear"
+            variant="outline"
+            color="neutral"
+            class="md:hidden"
+            @click="openNavbar()"
+          />
         </section>
       </section>
     </UContainer>
