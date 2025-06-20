@@ -16,8 +16,8 @@
       :items="items"
       :ui="{
         root: 'mt-8 space-y-2',
-        item: 'border-none rounded-lg bg-elevated dark:hover:bg-accented hover:bg-elevated',
-        label: 'text-lg',
+        item: 'border last:border-b bg-default rounded-lg data-[state=open]:border-primary data-[state=open]:bg-muted data-[state=closed]:hover:border-accented',
+        label: 'text-lg font-bold',
         trigger: 'p-3',
         body: 'text-default text-sm md:text-base px-3',
         content: 'data-[state=open]:animate-[accordion-down_200ms_ease-in-out] data-[state=closed]:animate-[accordion-up_200ms_ease-in-out]',
