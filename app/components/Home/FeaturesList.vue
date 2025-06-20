@@ -11,14 +11,14 @@
       ระบบ <span class="text-primary">พร้อมขาย</span> มีคุณสมบัติที่หลากหลาย
       ช่วยให้การจัดการร้านค้าของคุณเป็นเรื่องง่ายและสะดวกสบาย
     </p>
-    <section class="flex flex-row flex-wrap gap-4">
+    <section class="gap-2 space-y-2 columns-1 md:columns-2 lg:columns-3">
       <template
         v-for="feature in features"
         :key="feature.title"
       >
         <UCard
           variant="soft"
-          :ui="{ root: 'shadow place-content-center flex-1/2 md:flex-1/3 lg:flex-1/4' }"
+          :ui="{ root: 'shadow place-content-center break-inside-avoid-column' }"
         >
           <div class="flex items-center">
             <UIcon
