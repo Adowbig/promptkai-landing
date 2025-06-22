@@ -1,14 +1,14 @@
 <template>
   <section class="pt-24">
     <UContainer>
-      <h1 class="font-bold text-highlighted text-3xl md:text-5xl text-right">
+      <h1 class="font-heading font-bold text-highlighted text-3xl md:text-5xl text-center md:text-right">
         <UIcon
           name="solar:chat-round-like-bold"
           class="inline-block size-8 md:size-12 text-primary align-bottom"
         />
         ความคิดเห็นจาก<span class="text-primary">ผู้ใช้จริง</span>
       </h1>
-      <p class="mt-2 text-muted dark:text-toned md:text-lg text-right text-balance">
+      <p class="mt-2 text-muted dark:text-toned md:text-lg text-center md:text-right text-balance">
         ผู้ใช้จริงของ <span class="text-primary">พร้อมขาย</span> ได้แชร์ประสบการณ์การใช้งาน
         และความพึงพอใจในการใช้งานระบบของเรา
       </p>

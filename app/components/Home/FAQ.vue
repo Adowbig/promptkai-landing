@@ -1,13 +1,13 @@
 <template>
   <UContainer class="py-24">
-    <h1 class="font-bold text-highlighted text-3xl md:text-5xl">
+    <h1 class="font-heading font-bold text-highlighted text-3xl md:text-5xl text-center md:text-start">
       <UIcon
         name="solar:question-circle-bold"
         class="inline-block size-8 md:size-12 text-primary align-bottom"
       />
       คำถามที่พบบ่อย
     </h1>
-    <p class="mt-2 text-muted dark:text-toned md:text-lg text-balance">
+    <p class="mt-2 text-muted dark:text-toned md:text-lg text-center md:text-start text-balance">
       หากคุณมีคำถามเกี่ยวกับการใช้งาน <span class="text-primary">พร้อมขาย</span> หรือ
       ต้องการข้อมูลเพิ่มเติม คุณสามารถดูคำถามที่พบบ่อยได้ที่นี่
     </p>

@@ -1,13 +1,13 @@
 <template>
   <UContainer class="pt-24">
-    <UIcon
-      name="solar:hand-stars-bold"
-      class="inline-block float-start mr-2 size-8 md:size-12 text-primary"
-    />
-    <h1 class="mb-2 font-bold text-highlighted text-3xl md:text-5xl">
+    <h1 class="mb-2 font-heading font-bold text-highlighted text-3xl md:text-5xl text-center md:text-start">
+      <UIcon
+        name="solar:hand-stars-bold"
+        class="inline-block mr-2 size-8 md:size-12 text-primary"
+      />
       คุณสมบัติของระบบ <span class="text-primary">พร้อมขาย</span>
     </h1>
-    <p class="mb-8 text-muted dark:text-toned md:text-lg">
+    <p class="mb-8 text-muted dark:text-toned md:text-lg text-center md:text-start">
       ระบบ <span class="text-primary">พร้อมขาย</span> มีคุณสมบัติที่หลากหลาย
       ช่วยให้การจัดการร้านค้าของคุณเป็นเรื่องง่ายและสะดวกสบาย
     </p>
@@ -15,22 +15,22 @@
       <template
         v-for="feature in features"
         :key="feature.title"
-        >
-          <div class="flex items-center">
-            <UIcon
-              :name="feature.icon"
-              size="32"
-              class="mr-4 text-primary"
-            />
-            <div class="flex-1">
+      >
+        <div class="flex items-center">
+          <UIcon
+            :name="feature.icon"
+            size="32"
+            class="mr-4 text-primary"
+          />
+          <div class="flex-1">
             <h2 class="font-bold text-highlighted text-xl">
-                {{ feature.title }}
-              </h2>
-              <p class="text-muted text-sm md:text-base">
-                {{ feature.description }}
-              </p>
-            </div>
+              {{ feature.title }}
+            </h2>
+            <p class="text-muted text-sm md:text-base">
+              {{ feature.description }}
+            </p>
           </div>
+        </div>
       </template>
     </section>
   </UContainer>

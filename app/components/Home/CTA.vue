@@ -8,7 +8,7 @@
       >
         <div class="flex lg:flex-row flex-col lg:justify-between items-center pt-16 lg:pt-0 text-center lg:text-start">
           <div class="mb-8 lg:mb-0">
-            <h1 class="mb-2 font-extrabold text-highlighted text-3xl md:text-5xl">
+            <h1 class="mb-2 font-heading font-extrabold text-highlighted text-3xl md:text-5xl">
               ดาวน์โหลด <span class="text-primary">พร้อมขาย</span> เลย
             </h1>
             <p class="text-muted dark:text-toned md:text-lg">
@@ -23,6 +23,7 @@
           <NuxtImg
             provider="cloudinary"
             class="w-2xs md:w-sm"
+            width="400"
             src="phoneMockup_fmiixn"
           />
         </div>
