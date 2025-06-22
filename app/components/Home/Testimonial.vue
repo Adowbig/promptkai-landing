@@ -12,7 +12,7 @@
         ผู้ใช้จริงของ <span class="text-primary">พร้อมขาย</span> ได้แชร์ประสบการณ์การใช้งาน
         และความพึงพอใจในการใช้งานระบบของเรา
       </p>
-      <section class="flex flex-wrap gap-4 space-y-4 mt-8">
+      <section class="mt-8">
         <div
           class="relative flex flex-col justify-center items-center w-full overflow-hidden"
         >
@@ -25,7 +25,7 @@
 
           <HomeMarquee
             pause-on-hover
-            class="[--duration:30s]"
+            class="[--duration:30s] [--gap:0.5rem]"
           >
             <template
               v-for="testimonial in testimonials"
@@ -33,7 +33,7 @@
             >
               <UCard
                 variant="soft"
-                :ui="{ root: 'w-[300px]', body: 'p-3 sm:p-3' }"
+                :ui="{ root: 'w-[300px] h-fit', body: 'p-3 sm:p-3' }"
               >
                 <div class="flex flex-row justify-start items-center space-x-3 mb-4">
                   <UAvatar

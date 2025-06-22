@@ -1,28 +1,34 @@
 <template>
-  <Motion
-    :initial="{
-      scale: 1.1,
-      opacity: 0,
-      filter: 'blur(10px)',
-    }"
-    :while-in-view="{
-      scale: 1,
-      opacity: 1,
-      filter: 'blur(0px)',
-    }"
-    :in-view-options="{ once: true, margin: '0px 0px -20% 0px', amount: $props.amount }"
-    :transition="{
-      duration: $props.duration,
-      delay: $props.delay,
-      ease: 'easeOut',
-      type: 'tween',
-    }"
+  <LazyMotion
+    :features="domAnimation"
   >
-    <slot />
-  </Motion>
+    <Motion
+      :initial="{
+        scale: 1.1,
+        opacity: 0,
+        filter: 'blur(10px)',
+      }"
+      :while-in-view="{
+        scale: 1,
+        opacity: 1,
+        filter: 'blur(0px)',
+      }"
+      :in-view-options="{ once: true, margin: '0px 0px -20% 0px', amount: $props.amount }"
+      :transition="{
+        duration: $props.duration,
+        delay: $props.delay,
+        ease: 'easeOut',
+        type: 'tween',
+      }"
+    >
+      <slot />
+    </Motion>
+  </LazyMotion>
 </template>
 
 <script lang="ts" setup>
+import { domAnimation } from 'motion-v'
+
 withDefaults(defineProps<{
   duration?: number
   delay?: number

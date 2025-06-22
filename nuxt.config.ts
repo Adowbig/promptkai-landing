@@ -63,6 +63,7 @@ export default defineNuxtConfig({
   },
   icon: {
     provider: 'iconify',
+    mode: 'svg',
   },
   image: {
     cloudinary: {
