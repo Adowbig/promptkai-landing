@@ -52,10 +52,11 @@ export default defineNuxtConfig({
   fonts: {
     families: [
       { name: 'Kanit', provider: 'google', display: 'swap', global: true },
+      { name: 'Noto Sans Thai', provider: 'google', display: 'swap', global: true },
     ],
     provider: 'google',
     defaults: {
-      weights: [200, 300, 400, 500, 700, 800, 900],
+      weights: [300, 400, 500, 700, 800, 900],
       preload: true,
       styles: ['normal'],
       subsets: ['latin', 'latin-ext', 'thai'],

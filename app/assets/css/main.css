@@ -3,7 +3,8 @@
 @import "tw-animate-css";
 
 @theme static {
-  --font-sans: 'Kanit', sans-serif;
+  --font-heading: 'Kanit';
+  --font-sans: 'Noto Sans Thai', sans-serif;
 
   --color-promptkai-50: #f6f6fc;
   --color-promptkai-100: #f0eff8;
