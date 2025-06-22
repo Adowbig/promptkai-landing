@@ -27,7 +27,7 @@ const props = withDefaults(defineProps<{
   once?: boolean
   direction?: 'up' | 'down' | 'left' | 'right'
 }>(), {
-  duration: 0.4,
+  duration: 0.5,
   delay: 0,
   once: false,
   direction: 'down',
