@@ -11,14 +11,10 @@
       ระบบ <span class="text-primary">พร้อมขาย</span> มีคุณสมบัติที่หลากหลาย
       ช่วยให้การจัดการร้านค้าของคุณเป็นเรื่องง่ายและสะดวกสบาย
     </p>
-    <section class="gap-2 space-y-2 columns-1 md:columns-2 lg:columns-3">
+    <section class="gap-12 space-y-12 columns-1 md:columns-2 lg:columns-3">
       <template
         v-for="feature in features"
         :key="feature.title"
-      >
-        <UCard
-          variant="soft"
-          :ui="{ root: 'shadow place-content-center break-inside-avoid-column' }"
         >
           <div class="flex items-center">
             <UIcon
@@ -27,7 +23,7 @@
               class="mr-4 text-primary"
             />
             <div class="flex-1">
-              <h2 class="font-bold text-xl">
+            <h2 class="font-bold text-highlighted text-xl">
                 {{ feature.title }}
               </h2>
               <p class="text-muted text-sm md:text-base">
@@ -35,7 +31,6 @@
               </p>
             </div>
           </div>
-        </UCard>
       </template>
     </section>
   </UContainer>
