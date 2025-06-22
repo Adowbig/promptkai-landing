@@ -33,9 +33,9 @@
             >
               <UCard
                 variant="soft"
-                :ui="{ root: 'w-[300px] h-fit', body: 'p-3 sm:p-3' }"
+                :ui="{ root: 'w-[300px] h-fit', body: 'p-3 sm:p-3', footer: 'flex flex-row items-center justify-start space-x-2 p-3 sm:p-3' }"
               >
-                <div class="flex flex-row justify-start items-center space-x-3 mb-4">
+                <template #footer>
                   <UAvatar
                     :src="testimonial.img"
                     alt="User Avatar"
@@ -50,8 +50,8 @@
                       {{ testimonial.role }}
                     </p>
                   </div>
-                </div>
-                <p class="text-default text-sm md:text-base">
+                </template>
+                <p class="text-default text-sm md:text-base before:content-['“'] after:content-['”']">
                   {{ testimonial.quote }}
                 </p>
               </UCard>
