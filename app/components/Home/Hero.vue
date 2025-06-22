@@ -44,48 +44,7 @@
             />
           </div>
         </MotionBlurScale>
-        <MotionBlurScale :amount="0.2">
-          <div class="flex flex-col items-center gap-4 mt-12">
-            <p class="text-muted dark:text-toned lg:text-left text-center:">
-              สร้างโดยเทคโนโลยี Open Source ชั้นนำ
-            </p>
-
-            <ul class="flex flex-wrap justify-center items-center gap-4">
-              <template
-                v-for="framework in frameworks"
-                :key="framework.name"
-              >
-                <UTooltip
-                  :text="framework.name"
-                  :ui="{ text: 'text-sm', content: 'dark:bg-neutral-950' }"
-                >
-                  <li
-                    class="text-highlighted hover:text-primary transition-colors duration-200"
-                  >
-                    <UIcon
-                      :name="framework.icon"
-                      size="24"
-                    />
-                  </li>
-                </UTooltip>
-              </template>
-            </ul>
-          </div>
-        </MotionBlurScale>
       </div>
     </UContainer>
   </section>
 </template>
-
-<script setup lang="ts">
-const frameworks = [
-  {
-    name: 'Frappe Framework',
-    icon: 'simple-icons:frappe',
-  },
-  {
-    name: 'Flutter',
-    icon: 'simple-icons:flutter',
-  },
-]
-</script>

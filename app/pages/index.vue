@@ -8,6 +8,12 @@
       <HomeFeaturesList />
     </MotionSlideBlur>
     <MotionSlideBlur
+      direction="up"
+      once
+    >
+      <HomeTechStack />
+    </MotionSlideBlur>
+    <MotionSlideBlur
       direction="right"
       once
     >
